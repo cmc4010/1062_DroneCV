@@ -25,19 +25,19 @@ int 	main(int argc, char** argv) {
 
 	// swap red and blue channels
 	bgr2rgb(inputImg, outputImg3);
-	
+
 	// custom bilinear_interpolation function
 	bilinear_interpolation(inputImg, outputImg1, scalingFactor);
-	
+
 	// bilinear interpolation with built-in function
 	resize(inputImg, outputImg2, Size(), scalingFactor, scalingFactor, INTER_LINEAR);
 
 	imshow("My Interpolation", outputImg1);
 	imshow("Opencv build-in function", outputImg2);
 	imshow("Red-Blue Swap", outputImg3);
-
 	waitKey(0); // pause
 
+	/*
 	vector<int> compression_params;
 	compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);
 	compression_params.push_back(100);
@@ -52,6 +52,7 @@ int 	main(int argc, char** argv) {
 
 	fprintf(stdout, "Image output as JPG successfully.\n");
 	waitKey(0); // pause
+	*/
 
 	return 0;
 }
