@@ -6,7 +6,9 @@ using namespace std;
 using namespace cv;
 
 // write down your warping function here
-void warpImage(Mat& input, Mat& output)
+void warpImage(Mat& input, Mat& output) {
+
+}
 
 void onMouse(int event, int x, int y, int flags, void* param) {
 	vector<Point2f>* ptr = (vector<Point2f>*) param;
@@ -33,7 +35,7 @@ int main(int argc, char **argv) {
 	Mat frame;
 	cap >> frame;
 
-	vector<Point2f> cap_corner;
+	vector<Point2f> cap_corner; // webcam frame corners
 	vector<Point2f> img_corner;
 
   // add the corner of frame into cap_corner
